@@ -34,9 +34,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
+const addPurchases = (arr) => arr.reduce((acc,val) => acc + val, 0);
+//{
   // Solution code here...
-};
+//};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
