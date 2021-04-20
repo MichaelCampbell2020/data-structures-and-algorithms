@@ -26,6 +26,8 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  const filtered = arr.filter(type => typeof  type === 'number');
+  return filtered;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,9 +38,7 @@ Write a function named containsAnd that, given an array of strings as input, use
 For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
-const containsAnd = (arr) => {
-  // Solution code here...
-};
+const containsAnd = arr => arr.filter(value => value.includes('and'));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
