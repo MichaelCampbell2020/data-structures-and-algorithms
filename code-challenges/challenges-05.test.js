@@ -11,9 +11,8 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
-  // Solution code here...
-};
+const toLastNames = people => people.map(value => value.firstName + ' ' + value.lastName);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,9 +21,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => {
-  // Solution code here...
-};
+const addValues = (arr) => arr.reduce((a,b) => a + b, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,9 +35,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
-};
+const addPurchases = (arr) => arr.reduce((acc,cur) => acc + cur.purchasePrice, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -50,9 +45,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = (arr) => arr.reduce(acc => acc + 1, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -112,6 +105,15 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  const newArray = arr.reduce((acc, cur) => {
+
+    acc.push(cur.name);
+    return acc;
+
+  }, []);
+
+  return newArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,9 +124,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  // Solution code here...
-};
+const reversedString = (str) => str.split('').reduce((acc, cur) => cur + acc, '');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
