@@ -104,16 +104,12 @@ const salesData = (hours, data) => {
   let soldCookies = [];
 
   for (let i = 0; i < hours.length; i++) {
-    let cookie = 0;
-
-    for (let j = 0; j < data.length; j++) {
-      cookie += soldCookies.push(cookie);
-
-    }
-
-    return soldCookies;
+    soldCookies.push({
+      sales: `${data[i]} cookies`,
+      time: hours[i]
+    })
   }
-
+  return soldCookies;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,11 +133,7 @@ const errands = [
   }
 ];
 
-const howManyTreats = (arr) => {
-  // Solution code here...
-
-  
-};
+const howManyTreats = (arr) => arr[2].items[1].quantity;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
